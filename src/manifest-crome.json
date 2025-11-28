@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "__MSG_extensionName__",
+    "version": "1.0",
+    "description": "__MSG_extensionDescription__",
+    "default_locale": "ru",
+    "icons": {
+        "192": "images/favicon-192x192.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://site-alarm.com/tools/page-checker/*"],
+            "js": ["content/xpath-service.js"]
+        },
+        {
+            "matches": ["*://*/*"],
+            "css": ["content/xpath-search.css"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "tabs",
+        "scripting"
+    ]
+}

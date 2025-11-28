@@ -1,0 +1,79 @@
+.sa-356a19.sa-2b791 {
+    box-shadow: 0px 0px 4px 7px #e91e17c2 !important;
+}
+/*Reset styles*/
+#sa-hl-widjet,
+#sa-hl-widjet * {
+    margin: 0;
+    padding: 0;
+}
+#sa-hl-widjet {
+    position: fixed;
+    z-index: 1000;
+    right: 0px;
+    bottom: 0;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px 0 0 0;
+    line-height: 1.3em;
+}
+#sa-hl-widjet .sa-hl-close {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath fill='%23c9c9c9' d='M8.002 9.416a1 1 0 1 1 1.414-1.414l2.59 2.59 2.584-2.584a1 1 0 1 1 1.414 1.414l-2.584 2.584 2.584 2.584a1 1 0 0 1-1.414 1.414l-2.584-2.584-2.584 2.584a1 1 0 0 1-1.414-1.414l2.584-2.584-2.59-2.59Z'/%3E%3Cpath fill='%23c9c9c9' fill-rule='evenodd' d='M23 4a3 3 0 0 0-3-3H4a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V4Zm-2 0a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    position: absolute;
+    right: 10px;
+    top: -12px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+#sa-hl-widjet .sa-hl-close:hover {
+    background-color: #f9f9f9;
+}
+#sa-hl-widjet .sa-hl-xpath {
+    color: #036ec9;
+    margin-bottom: 10px;
+}
+#sa-hl-widjet .sa-hl-xpath .sa-hl-not-found-part {
+    display: inline;
+    color: #828282;
+}
+#sa-hl-widjet .sa-hl-message {
+    margin-bottom: 10px;
+}
+#sa-hl-widjet .sa-hl-message a {
+    text-decoration: underline;
+    color: inherit;
+}
+#sa-hl-widjet .sa-hl-message a:hover {
+    text-decoration: none;
+}
+#sa-hl-widjet .sa-hl-control {
+    margin: 0 -10px -10px -10px;
+    border-top: 1px solid #c9c9c9;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sa-hl-widjet .sa-hl-control .sa-hl-count {
+    padding: 0 10px;
+}
+#sa-hl-widjet .sa-hl-control .sa-hl-prev,
+#sa-hl-widjet .sa-hl-control .sa-hl-next {
+    height: 40px;
+    width: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m15 6-6 6 6 6'/%3E%3C/svg%3E");
+    cursor: pointer;
+    border-right: 1px solid #c9c9c9;
+}
+#sa-hl-widjet .sa-hl-control .sa-hl-prev:hover,
+#sa-hl-widjet .sa-hl-control .sa-hl-next:hover {
+    background-color: #f9f9f9;
+}
+#sa-hl-widjet .sa-hl-control .sa-hl-next {
+    transform: rotate(180deg);
+}
