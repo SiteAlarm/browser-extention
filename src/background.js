@@ -73,12 +73,13 @@ function init(xpathList, widjetHtml) {
         hightlight(index);
     }
     function hightlight(index) {
-        xpathElement.innerHTML = xpathList[index].xpath;
+        var searchXpath = xpathList[index].xpath;
+        if(/[<>&]/.test(searchXpath)) return;
+        xpathElement.innerHTML = searchXpath;
         messagePartitialy.style.display = "none";
         messageNotFound.style.display = "none";
         messageInvisible.style.display = "none";
         clearHighlught();
-        var searchXpath = xpathList[index].xpath;
         var prevSearch = null;
         for(var i = 0; searchXpath !== prevSearch; ++i) {
             var e = search(searchXpath);
