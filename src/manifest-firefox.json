@@ -9,7 +9,7 @@
     },
     "content_scripts": [
         {
-            "matches": ["https://site-alarm.com/tools/page-checker/*"],
+            "matches": ["https://site-alarm.com/tools/page-checker/*", "https://site-alarm.com/*/tools/page-checker/*"],
             "js": ["content/xpath-service.js"]
         },
         {
