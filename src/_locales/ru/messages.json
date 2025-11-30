@@ -12,15 +12,15 @@
         "description": "Указание колличество найденных элементов"
     },
     "xpathRartitialy": {
-        "message": "Частичное совпадение. Синим указан xpath найденного элемента. <a href=\"https://site-alarm.com/blog/poisk_elementov_po_xpath_mini_gayd\" target=\"_blank\">Из-за чего это происходит?</a>",
+        "message": "Частичное совпадение. Синим указан xpath найденного элемента. <a href=\"https://site-alarm.com/blog/poisk_elementov_po_xpath_mini_gayd#partitialy\" target=\"_blank\">Из-за чего это происходит?</a>",
         "description": "Сообщение о частичном совпадении xpath"
     },
     "xpathNotFound": {
-        "message": "Элемент не найден. <a href=\"https://site-alarm.com/blog/poisk_elementov_po_xpath_mini_gayd\" target=\"_blank\">Из-за чего это происходит?</a>",
+        "message": "Элемент не найден. <a href=\"https://site-alarm.com/blog/poisk_elementov_po_xpath_mini_gayd#partitialy#not-found\" target=\"_blank\">Из-за чего это происходит?</a>",
         "description": "Сообщение о том, что элемент не найден xpath"
     },
     "xpathInvisible": {
-        "message": "Элемент найден в DOM страницы, но скрыт.",
+        "message": "Элемент найден в DOM страницы, но скрыт. <a href=\"https://site-alarm.com/blog/poisk_elementov_po_xpath_mini_gayd#hidden\" target=\"_blank\">Из-за чего это происходит?</a>",
         "description": "Сообщение о том, что элемент не видно, но он есть."
     }
 }

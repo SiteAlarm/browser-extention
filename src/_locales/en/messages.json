@@ -12,15 +12,15 @@
         "description": "Indicating the number of found elements"
     },
     "xpathRartitialy": {
-        "message": "Partial match. The xpath of the found element is shown in blue. <a href=\"https://site-alarm.com/en/blog/poisk_elementov_po_xpath_mini_gayd\" target=\"_blank\">Why is this happening?</a>",
+        "message": "Partial match. The xpath of the found element is shown in blue. <a href=\"https://site-alarm.com/en/blog/poisk_elementov_po_xpath_mini_gayd#partitialy\" target=\"_blank\">Why is this happening?</a>",
         "description": "Partial XPath Match Message"
     },
     "xpathNotFound": {
-        "message": "Element not found. <a href=\"https://site-alarm.com/en/blog/poisk_elementov_po_xpath_mini_gayd\" target=\"_blank\">What is causing this?</a>",
+        "message": "Element not found. <a href=\"https://site-alarm.com/en/blog/poisk_elementov_po_xpath_mini_gayd#not-found\" target=\"_blank\">What is causing this?</a>",
         "description": "Message indicating that an element was not found by XPath"
     },
     "xpathInvisible": {
-        "message": "The element was found in the page's DOM, but is hidden.",
+        "message": "The element was found in the page's DOM, but is hidden. <a href=\"https://site-alarm.com/en/blog/poisk_elementov_po_xpath_mini_gayd#hidden\" target=\"_blank\">What is causing this?</a>",
         "description": "Message indicating that the element is not visible, but it is present."
     }
 }
