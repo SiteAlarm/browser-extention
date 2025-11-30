@@ -26,5 +26,13 @@
     "permissions": [
         "tabs",
         "scripting"
-    ]
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "@site-alarm",
+            "data_collection_permissions": {
+                "required": ["none"]
+            }
+        }
+    }
 }
