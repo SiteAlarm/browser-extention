@@ -15,30 +15,32 @@ function init(xpathList, widjetHtml) {
             nodes[i].classList.remove('sa-356a19', 'sa-2b791');
     }
     function isVisible(elem) {
-            if (!(typeof elem.getBoundingClientRect === "function")) {
-                return false;
-            }
-            // Проверяем позиционирование
-            var position = elem.getBoundingClientRect();
-            if (position.left+elem.offsetWidth < 0) return 1;
-            if (position.left > document.documentElement.scrollWidth) return 2;
-            if (position.top + elem.offsetHeight < 0) return 3;
-            if (position.top > document.documentElement.scrollHeight) return 4;
-            // Проверяем CSS свойства
-            var curElem = elem;
-            var opacity = 1;
-            do {
-                const style = getComputedStyle(curElem);
-                if (style.display === 'none') return 5;
-                if (style.visibility !== 'visible') return 6;
-                opacity *= style.opacity;
-                curElem = curElem.parentNode;
-            } while (!(curElem instanceof HTMLDocument));
-            if (opacity < 0.1) return 7;
-            if (elem.offsetWidth + elem.offsetHeight + position.height + position.width === 0)
-                return 8;
-            return true;
+        if (!(typeof elem.getBoundingClientRect === "function")) {
+            return false;
         }
+        // Проверяем позиционирование
+        var position = elem.getBoundingClientRect();
+        if (position.left+elem.offsetWidth < 0) return 1;
+        if (position.left > document.documentElement.scrollWidth) return 2;
+        if (position.top + elem.offsetHeight < 0) return 3;
+        if (position.top > document.documentElement.scrollHeight) return 4;
+        if (elem.offsetWidth <=1 || elem.offsetHeight <=1 || position.height <= 0 || position.width <= 0)
+            return 8;
+        // Проверяем CSS свойства
+        var curElem = elem;
+        var opacity = 1;
+        do {
+            const style = getComputedStyle(curElem);
+            if (style.display === 'none') return 5;
+            if (style.visibility !== 'visible') return 6;
+            if (style.overflow === 'hidden' && (curElem.offsetWidth <=1 || curElem.offsetHeight <=1))
+                return 8;
+            opacity *= style.opacity;
+            curElem = curElem.parentNode;
+        } while (!(curElem instanceof HTMLDocument));
+        if (opacity < 0.1) return 7;
+        return true;
+    }
     function initWidjet() {
         var widjetElement = document.querySelector('#sa-hl-widjet');
         if(widjetElement === null) {
@@ -96,7 +98,8 @@ function init(xpathList, widjetHtml) {
             xpathElement.innerHTML = '<div class="sa-hl-not-found-part">'+searchXpath+'</div>';
             messageNotFound.style.display = "block";
         } else {
-            console.log(isVisible(e) );
+            // Write founded element in console for comfort debbig
+            console.log(e);
             if(isVisible(e) !== true)
                 messageInvisible.style.display = "block";
             if(i) {
